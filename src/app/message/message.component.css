@@ -1,0 +1,25 @@
+.message-success
+{
+    color: rgb(4, 71, 4);
+	background-color: #68a735;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px darkgreen solid;
+}
+
+.message-warning
+{
+    color: rgb(88, 8, 8);
+	background-color: #d31616;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px rgb(97, 3, 3) solid;
+}

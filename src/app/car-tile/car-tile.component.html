@@ -1,0 +1,34 @@
+<div class="gray-section">
+    <div class="container">
+        <div class="inline-tile-box">
+            <div class="tile" [class.unavailable]="available === false">
+                <div class="tile-header">{{carName}}</div>
+                <img class="tile-img" src="\{{image}}">
+                <table class="tile-description">
+                    <thead>
+                    <tr *ngIf="numberOfSeats">
+                    <th> Miejsc: </th>
+                    <th> {{numberOfSeats}} </th>
+                    </tr>
+                    <tr *ngIf="limit">
+                    <th> Łączna liczba kilometrów: </th>
+                    <th> {{limit}} </th>
+                    </tr>
+                    <tr *ngIf="deposit">
+                    <th> Kaucja: </th>
+                    <th> {{deposit}} </th>
+                    </tr>
+                    <tr *ngIf="carPrice">
+                    <th> Cena: </th>
+                    <th> {{carPrice}} </th>
+                    </tr>
+                    </thead>
+                </table>
+                <div class="tile-action" (click)="onRentCar()">
+                    <a *ngIf="available">Zarezerwuj!</a>
+                    <a *ngIf="available===false">Niedostępny</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
