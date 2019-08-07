@@ -8,6 +8,9 @@ import { CarTilesComponent } from './car-tiles/car-tiles.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { AdminComponent } from './admin/admin.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CarListComponent } from './admin/car-list/car-list.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { MainContentComponent } from './main-content/main-content.component';
     CarTilesComponent,
     HeaderComponent,
     FooterComponent,
-    MainContentComponent
+    MainContentComponent,
+    AdminComponent,
+    CarListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

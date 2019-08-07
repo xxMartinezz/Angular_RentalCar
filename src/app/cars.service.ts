@@ -14,7 +14,18 @@ export class CarsService {
 
   getCarList(): Observable<Car[]>
   {
-    this.messageService.add('Wyszukane samochody:');
+    //this.messageService.clear();
+    //this.messageService.add('Wyszukane samochody:');
+    if(this.messageService.messages.length > 0)
+    {
+      this.messageService.clear();
+      console.log("if");
+    }
+    else
+    {
+      this.messageService.add('Wyszukane samochody:');
+      console.log("else");
+    }
     return of([
       {id: 1, carName: 'Fiat', carPrice: 200, available: true, carImage: '../assets/car-2.png'},
       {id: 2, carName: 'BMW', carPrice: 200, available: false, carImage: '../assets/car-3.png'},
