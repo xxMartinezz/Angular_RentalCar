@@ -14,8 +14,6 @@ export class CarsService {
 
   getCarList(): Observable<Car[]>
   {
-    //this.messageService.clear();
-    //this.messageService.add('Wyszukane samochody:');
     if(this.messageService.messages.length > 0)
     {
       this.messageService.clear();

@@ -12,7 +12,7 @@ export class CarTilesComponent implements OnInit {
 
   private cars: Car[];
 
-  constructor(private carsService: CarsService, private messageService: MessageService) { }
+  constructor(private carsService: CarsService) { }
 
   ngOnInit() 
   {
