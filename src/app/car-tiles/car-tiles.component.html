@@ -1,4 +1,7 @@
-<h2><app-message></app-message></h2>
+<!--<h2><app-message></app-message></h2>-->
+
+<div *ngIf="!cars || cars.length === 0"><h2>Brak samochodow w bazie!</h2></div>
+<div *ngIf="cars.length !== 0"><h3>Wyszukano samochody:</h3></div>
 
 <app-car-tile *ngFor="let car of cars"
               [available]="car.available"

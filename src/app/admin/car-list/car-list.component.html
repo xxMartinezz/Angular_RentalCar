@@ -43,13 +43,14 @@
 
     <div class="gray-section admin-section">
         <div class="container">
-            <table class="carsTable">
+            <div *ngIf="!cars || cars.length === 0">Brak samochodow w bazie!</div>
+            <table *ngIf="cars.length > 0" class="carsTable">
                 <thead>
                 <tr>
                     <th>Auto</th>
                     <th>Cena</th>
                     <th>Dostępność</th>
-                    <th></th>
+                    <th>Szczegóły</th>
                 </tr>
                 </thead>
                 <tbody>
