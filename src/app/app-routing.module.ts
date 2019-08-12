@@ -8,6 +8,7 @@ import { CustomerListComponent } from './admin/customer-list/customer-list.compo
 import { RentalHistoryComponent } from './admin/rental-history/rental-history.component';
 import { CarDetailsComponent } from './admin/car-details/car-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CarDetailsEditComponent } from './admin/car-details-edit/car-details-edit.component';
 
 const routes: Routes = [
   {path: "", redirectTo: '/home', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
     children: [
       {path: "", redirectTo: 'cars', pathMatch: 'full'},
       {path: "cars", component: CarListComponent},
+      {path: "cars/new", component: CarDetailsEditComponent},
       {path: "customers", component: CustomerListComponent},
       {path: "rentals", component: RentalHistoryComponent},
       {path: "cars/:id", component: CarDetailsComponent}

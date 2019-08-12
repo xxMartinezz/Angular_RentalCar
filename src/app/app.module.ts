@@ -16,6 +16,7 @@ import { RentalHistoryComponent } from './admin/rental-history/rental-history.co
 import { CarDetailsComponent } from './admin/car-details/car-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CarDetailsEditComponent } from './admin/car-details-edit/car-details-edit.component';
+import {FormsModule} from "@angular/forms"; //import umozliwiajacy dodawanie formularzy
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CarDetailsEditComponent } from './admin/car-details-edit/car-details-ed
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,4 +7,12 @@ export class Car
     carImage?: string;
     available: boolean;
     numberOfSeats?: number;
+
+    constructor(id?: number, name?: string, price?: number, available?: boolean) 
+    {
+        this.id = id;
+        this.carName = name;
+        this.carPrice = price;
+        this.available = available;
+    }
 }

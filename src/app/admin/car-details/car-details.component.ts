@@ -22,7 +22,13 @@ export class CarDetailsComponent implements OnInit {
   })
   }
 
-  goBackToCars() {
+  goBackToCars()
+  {
     this.router.navigate(['admin', 'cars']);
+  }
+
+  goToCarDetailsEdit()
+  {
+    this.router.navigate(['/admin/cars/new']);
   }
 }

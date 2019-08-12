@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/car';
 import { CarsService } from 'src/app/cars.service';
 import { MessageService } from 'src/app/message.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-car-list',
@@ -12,7 +13,7 @@ export class CarListComponent implements OnInit {
 
   private cars: Car[];
 
-  constructor(private carsService: CarsService) { }
+  constructor(private carsService: CarsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() 
   {
@@ -21,4 +22,8 @@ export class CarListComponent implements OnInit {
       });
   }
 
+  goToCarDetailsEdit()
+  {
+    this.router.navigate(['/admin/cars/new']);
+  }
 }

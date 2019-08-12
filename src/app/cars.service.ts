@@ -40,4 +40,9 @@ export class CarsService {
     return this.cars.find(car => car.id === id);
   }
 
+  addCar(car: Car): void
+  {
+    this.cars.push(car);
+  }
+
 }

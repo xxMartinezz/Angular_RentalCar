@@ -1,3 +1,31 @@
-<p>
-  car-details-edit works!
-</p>
+<div class="container">
+  <h2>Dodaj samochód</h2>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      
+      <div>Id:
+          <input type="text" [(ngModel)]="id" name="id">
+      </div>
+
+      <div>Name:
+        <input type="text" [(ngModel)]="name" name="name" required minlength="2" maxlength="20">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+          Nieprawidłowa nazwa samochodu
+        </div>
+      </div>
+
+      <div>Price:
+        <input type="text" [(ngModel)]="price" name="price">
+      </div>
+
+      <div>Available:
+        <select [(ngModel)]="available" name="available">
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+
+      <button type="submit" 
+      [disabled]="form.invalid && (form.dirty || form.touched)">Zapisz</button>
+
+    </form>
+</div>
