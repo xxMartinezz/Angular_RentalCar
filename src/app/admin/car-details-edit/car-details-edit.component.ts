@@ -14,7 +14,7 @@ export class CarDetailsEditComponent implements OnInit {
 
   @ViewChild("form") form: NgForm;
   private car: Car = new Car();
-  private cars: Car[];
+  //private cars: Car[];
 
   constructor(private carsService: CarsService, private route: ActivatedRoute) { }
 
@@ -26,8 +26,11 @@ export class CarDetailsEditComponent implements OnInit {
 
   onSubmit()
   {
+    console.log(this.car);
     console.log(this.form.value);
     console.log(this.form.valid);
+    console.log(this.form.dirty);
+    console.log(this.form.touched);
     let car: Car = new Car(this.form.value.id, this.form.value.name, this.form.value.price, this.form.value.available);
     this.carsService.addCar(car);
     //console.log('on submit', this.car);
